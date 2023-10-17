@@ -17,7 +17,7 @@ class Settings(BaseSettings):
 
 class MpesaAPI(object):
 
-    def __init__(self, settings: Settings | None = None, **kwargs):
+    def __init__(self, settings: Settings = None, **kwargs):
         self.settings = settings
         self.sandbox_url = "https://sandbox.safaricom.co.ke"
         self.live_url = "https://api.safaricom.co.ke"
