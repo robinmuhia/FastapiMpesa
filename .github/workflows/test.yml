@@ -22,7 +22,7 @@ jobs:
           python -m pip install -r requirements.txt
       - name: Run tests
         run: |
-          coverage run -m pytest fastapi_mpesa
+          coverage run -m pytest fastapiMpesa
       - name: Upload coverage data to coveralls.io
         env:
           GITHUB_TOKEN: ${{ secrets.COVERALLS_TOKEN }}
