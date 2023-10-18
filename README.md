@@ -225,6 +225,10 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 Please make sure to update tests as appropriate.
 
+## Note of acknowlegement
+
+This project is inspired by [Allan_Sifuna](https://github.com/allansifuna/Flask-Mpesa)
+
 ## License
 
 [MIT](https://github.com/allansifuna/Flask-Mpesa/blob/master/LICENSE)

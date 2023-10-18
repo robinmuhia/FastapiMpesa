@@ -25,7 +25,7 @@ jobs:
           coverage run -m pytest fastapiMpesa
       - name: Upload coverage data to coveralls.io
         env:
-          GITHUB_TOKEN: ${{ secrets.COVERALLS_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           COVERALLS_FLAG_NAME: ${{ matrix.python-version }}
           COVERALLS_PARALLEL: true
         run: |
@@ -43,4 +43,4 @@ jobs:
           pip3 install --upgrade coveralls
           coveralls --finish
         env:
-          GITHUB_TOKEN: ${{ secrets.COVERALLS_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
