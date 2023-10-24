@@ -18,7 +18,7 @@ setup(
     zip_safe=False,
     platforms='any',
     install_requires=[
-        'Flask',
+        'FastAPI',
     ],
     classifiers=[
         'Development Status :: 5 - Production/Stable',
