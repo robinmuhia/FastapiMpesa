@@ -6,21 +6,22 @@
 | Version Info.  | ![PyPI](https://img.shields.io/pypi/v/FastapiMpesa) ![PyPI-Downloads](https://img.shields.io/pypi/dw/FastapiMpesa?color=blue&label=PyPI-Downloads)                                                                                                                                                                                                                                                         |
 | Licence        | ![GitHub](https://img.shields.io/github/license/robinmuhia/FastapiMpesa?color=dark-green)                                                                                                                                                                                                                                                                                                                  |
 
-# FastAPI-Mpesa
+# fastapiMpesa
 
-FastAPI-Mpesa provides a simple intergration for flask Applications with Mpesa Daraja API.
+fastapiMpesa provides a simple intergration for fastAPI Applications with Mpesa Daraja API.
 
 ## Installation
 
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install flask-mpesa.
 
 ```bash
-pip install FastAPI-Mpesa
+pip install fastapiMpesa
 ```
 
 ## QuickStart
 
 ```python
+from fastapiMpesa import MpesaAPI
 from app.config import settings
 
 mpesa_api=MpesaAPI(settings)
@@ -32,7 +33,7 @@ mpesa_api=MpesaAPI(settings)
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 class Settings(BaseSettings):
-    API_ENVIRONMENT: str
+    MPESA_API_ENVIRONMENT: str
     MPESA_API_KEY: str
     MPESA_API_SECRET: str
 
@@ -44,7 +45,12 @@ settings = Settings()
 ## Usage
 
 For the api requests to be processed by safaricom, they need to be secure. This means that your urls should
-use https instead of http protocal. I recommend use of a port tunneling app like Ngrok.
+use https instead of http protocal. I recommend use of a port tunneling app like Ngrok. In production, you should
+set your mpesa_api_environment in the .env file as follows;
+
+```
+MPESA_API_ENVIRONMENT=production
+```
 
 ## Sample Credentials
 
@@ -231,4 +237,4 @@ This project is inspired by [Allan_Sifuna](https://github.com/allansifuna/Flask-
 
 ## License
 
-[MIT](https://github.com/allansifuna/Flask-Mpesa/blob/master/LICENSE)
+[MIT](https://github.com/robinmuhia/FastapiMpesa/blob/master/LICENSE)
